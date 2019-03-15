@@ -5,6 +5,8 @@ import com.company.javabussimulator.Simulation;
 import java.util.*;
 import javax.persistence.*;
 
+import org.apache.log4j.Logger;
+
 @Entity
 @Table(name = "bus")
 public class Bus implements Runnable {
@@ -82,13 +84,16 @@ public class Bus implements Runnable {
     public void run() {
         Simulation s = new Simulation();
         Stop stop = getCurrentStop();
+        Logger log = Logger.getLogger(Bus.class);
         Iterator<Person> personIterator = stop.getPassengers().iterator();
         Iterator<Person> passengerIterator = getPassengers().iterator();
+
         while (passengerIterator.hasNext()) {
             Person passenger = passengerIterator.next();
             if (passenger.getDestination().equals(stop)) {
                 /*this.passengers.remove(passenger);*/
                 System.out.printf("The Passenger id %d got off the Bus id %d\n", passenger.getId(), this.getId());
+                log.info("The Passenger id: " + passenger.getId() + " got off the Bus id: " + this.getId());
                 passengerIterator.remove();
                 sleep(Long.valueOf(s.getRandomIntInRangeEnclosed(s.passengerDurationMin, s.passengerDurationMin)));
             }
@@ -103,6 +108,7 @@ public class Bus implements Runnable {
             }
         }
     }
+
 
     private void sleep(long ms) {
         try {
