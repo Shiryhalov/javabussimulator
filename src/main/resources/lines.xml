@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinesData>
+    <LineData Number="247e" Interval="15" Cost="10">
+        <StopsData>
+            <StopData Name="ХАИ"/>
+            <StopData Name="Молодость"/>
+            <StopData Name="Караван"/>
+            <StopData Name="Жуки"/>
+        </StopsData>
+    </LineData>
+    <LineData Number="240e" Interval="15" Cost="9">
+        <StopsData>
+            <StopData Name="ЖД"/>
+            <StopData Name="м. Университет"/>
+            <StopData Name="м. Героев труда"/>
+            <StopData Name="Пушкина"/>
+        </StopsData>
+    </LineData>
+</LinesData>
