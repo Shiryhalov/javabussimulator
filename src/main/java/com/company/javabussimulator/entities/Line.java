@@ -142,7 +142,7 @@ public class Line implements Runnable {
 
     private void sleep(long ms) {
         try {
-            Thread.sleep(ms + 4000);
+            Thread.sleep(ms + 40);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

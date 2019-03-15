@@ -13,6 +13,7 @@
         <property name="hbm2ddl.auto">create</property>
         <property name="hibernate.connection.autocommit">false</property>
         <property name="current_session_context_class">thread</property>
+        <property name="hibernate.enable_lazy_load_no_trans">true</property>
 
         <mapping class="com.company.javabussimulator.entities.Person"/>
         <mapping class="com.company.javabussimulator.entities.Student"/>

@@ -25,5 +25,15 @@ public class Main {
                 System.out.println(k.getName());
             }
         }*/
+        /*for(int x; x<2)
+        for (Line x : lines) {
+            Thread thread1 = new Thread(x);
+            thread1.start();
+        }*/
+        for (long x = 1; x < 3; x++) {
+            Line line = Factory.getInstance().getLineDAO().getLineById(x);
+            Thread thread1 = new Thread(line);
+            thread1.start();
+        }
     }
 }

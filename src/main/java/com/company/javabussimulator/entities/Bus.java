@@ -77,66 +77,6 @@ public class Bus implements Runnable {
         this.maxCapacity = maxCapacity;
     }
 
-    /*private int id;
-    private int maxCapacity;
-    *//*private ArrayList<Person> passengers;*//*
-    private List<Person> passengers = Collections.synchronizedList(new ArrayList<>());
-    private Stop currentStop = null;
-    private Line currentLine = null;
-
-
-    public Bus(int id, int maxCapacity) {
-        this.id = id;
-        this.maxCapacity = maxCapacity;
-    }
-
-    public Bus() {
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public int getMaxCapacity() {
-        return maxCapacity;
-    }
-
-    public void setMaxCapacity(int maxCapacity) {
-        this.maxCapacity = maxCapacity;
-    }
-
-    public List<Person> getPassengers() {
-        return passengers;
-    }
-
-    public void setPassengers(List<Person> passengers) {
-        this.passengers = passengers;
-    }
-
-    public Stop getCurrentStop() {
-        return currentStop;
-    }
-
-    public void setCurrentStop(Stop currentStop) {
-        this.currentStop = currentStop;
-    }
-
-    public Line getCurrentLine() {
-        return currentLine;
-    }
-
-    public void setCurrentLine(Line currentLine) {
-        this.currentLine = currentLine;
-    }
-
-    public void addPassengers(Person people) {
-        passengers.add(people);
-    }/*
-
     /*Поток высадки/посадки пассажиров на автобус*/
     @Override
     public void run() {
